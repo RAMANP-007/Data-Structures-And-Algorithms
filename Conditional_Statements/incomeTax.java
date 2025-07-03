@@ -1,4 +1,4 @@
-public class IncomeTax {
+public class incomeTax {
     public static void main(String args[]) {
         int income = 180000;
         int tax;
