@@ -4,18 +4,26 @@ public class subarrays {
     
 
     public static void PrintSubarrays(int numbers[]) {
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
         for(int i = 0; i <= numbers.length ; i++) {
             int start = i;
             for(int j= i; j <= numbers.length ; j++) {
              int end = j;
+                currSum = 0;
              for (int k = start; k < end; k++) {
-                System.out.print(numbers[k] + " ");
+                currSum += numbers[k];
+               System.out.print(currSum + " ");
+                
              }
-             System.out.println();
+              if (currSum > maxSum) {
+                    maxSum = currSum;
+                }
             }
-            System.out.println();
-
+           
+          
         }
+        System.out.println("The maximum sum of subarrays is: " + maxSum);
     }
 
 
